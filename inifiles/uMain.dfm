@@ -1,4 +1,4 @@
-object Form1: TForm1
+object fmMain: TfmMain
   Left = 0
   Top = 0
   Caption = 'IniFiles - Samples'
@@ -26,8 +26,6 @@ object Form1: TForm1
     TabOrder = 0
     object TabSheet1: TTabSheet
       Caption = 'Exemplo 1'
-      ExplicitWidth = 281
-      ExplicitHeight = 165
       object Panel1: TPanel
         Left = 0
         Top = 0
@@ -36,9 +34,6 @@ object Form1: TForm1
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitLeft = -8
-        ExplicitTop = -6
-        ExplicitWidth = 533
         object Label1: TLabel
           Left = 248
           Top = 16
@@ -85,6 +80,8 @@ object Form1: TForm1
     object tsDocumentacao: TTabSheet
       Caption = 'Documenta'#231#227'o'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
       ExplicitWidth = 281
       ExplicitHeight = 165
       object mmDoc: TMemo
@@ -116,10 +113,6 @@ object Form1: TForm1
           'caminho=<path>')
         ParentFont = False
         TabOrder = 0
-        ExplicitLeft = 288
-        ExplicitTop = 168
-        ExplicitWidth = 185
-        ExplicitHeight = 89
       end
     end
   end

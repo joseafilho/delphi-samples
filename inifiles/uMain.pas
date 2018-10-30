@@ -10,7 +10,7 @@ uses
   System.IniFiles, Vcl.ComCtrls;
 
 type
-  TForm1 = class(TForm)
+  TfmMain = class(TForm)
     mmDoc: TMemo;
     PageControl1: TPageControl;
     TabSheet1: TTabSheet;
@@ -33,13 +33,13 @@ type
   end;
 
 var
-  Form1: TForm1;
+  fmMain: TfmMain;
 
 implementation
 
 {$R *.dfm}
 
-procedure TForm1.FormCreate(Sender: TObject);
+procedure TfmMain.FormCreate(Sender: TObject);
 var
   PathIni: string;
 begin
@@ -50,18 +50,18 @@ begin
   FConfiguracoes := TIniFile.Create(PathIni);
 end;
 
-procedure TForm1.FormDestroy(Sender: TObject);
+procedure TfmMain.FormDestroy(Sender: TObject);
 begin
   FConfiguracoes.Free;
 end;
 
-procedure TForm1.btLerClick(Sender: TObject);
+procedure TfmMain.btLerClick(Sender: TObject);
 begin
   edCaminho.Text := FConfiguracoes.ReadString('BANCO', 'CAMINHO', '');
   mmOutput.Lines.Add('Leu a configuração: BANCO > CAMINHO: ' + edCaminho.Text);
 end;
 
-procedure TForm1.btEscreverClick(Sender: TObject);
+procedure TfmMain.btEscreverClick(Sender: TObject);
 begin
   FConfiguracoes.WriteString('BANCO', 'CAMINHO', edCaminho.Text);
   FConfiguracoes.UpdateFile;
